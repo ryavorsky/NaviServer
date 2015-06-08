@@ -26,12 +26,11 @@
             $response["navicity"] = $navi_city;
             $response["navibase"] = $pair[0];
             $response["city"] = $city;
-            $response["street"] = $city;
-            
-            echo json_encode($response);
+            $response["street"] = $pair[1];
             
             //echo $navi_city."\t@".$pair[0].":\t".$city.",\t".$pair[1]."\t<br/>";
         };
     };
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_PRETTY_PRINT);
 ?>
-    
