@@ -1,0 +1,5 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule    ^([0-9]+)/?$   map.php?addr=$1    [NC,L]
+RewriteRule    ^(0[0-9]+).([0-9]+)/?$   map.php?city=$1&addr=$2    [NC,L]
+RewriteRule    ^([0-9]+).([0-9]+)/?$   map.php?addr=$1&ext=$2    [NC,L]  
+RewriteRule    ^([0-9]+).([0-9]+).([0-9]+)/?$   map.php?city=$1&addr=$2&ext=$3    [NC,L]
